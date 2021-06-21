@@ -15,11 +15,12 @@ $name=$_POST['fullname'];
 $username=$_POST['username'];
 $password1=$_POST['password1'];
 $password2=$_POST['password2'];
-if( $password1!=$password2)
+if( $password1 != $password2)
 {
     ?>
     <script>
-    f1();
+        alert("Password does not match!");
+        window.location.href="./signupform.php";
     </script>
     <?php
 }
