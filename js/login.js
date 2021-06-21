@@ -17,3 +17,7 @@ function f4()
     let x=document.getElementById("k8");
     x.innerhtml="wrong password";
 }
+function f6()
+{
+    window.location.href="./home1.php";
+}
