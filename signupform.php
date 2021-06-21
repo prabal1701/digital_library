@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     <td><input type="password" placeholder=" Confirm password"  name="password2"required /></td>
-                    <td id="k8"></td>
+                    <td id="k8">wrong password</td>
                 </tr>
                 <tr>
                     <td><input id="s1" type="submit" value="Create An Account"/></td>
