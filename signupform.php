@@ -18,7 +18,7 @@
     </div>
     <div id="d3">
         <p id="p3">        For User     </p>
-        <form action="signup.php" method="post">
+        <form action="signupform.php" method="post">
             <table id="t1" style="border-collapse:separate;
                     border-spacing:0 15px;cellspacing:30px;" >
                 <tr id="r1">
@@ -26,18 +26,64 @@
                 </tr>
                 <tr>
                     <td><input type="text" placeholder="user name" name="username" required /></td>
-                    <td id="k7"></td>
+                    <?php
+                        if (isset($_POST["submit"])) 
+                        {
+                            $name=$_POST['fullname'];
+                             $username=$_POST['username'];
+                            $password1=$_POST['password1'];
+                            $password2=$_POST['password2'];
+                            if($password1==$password2)
+                            {
+                                $con=mysqli_connect('localhost','root');
+                                mysqli_select_db($con,'brm');
+                                $q="insert into user(username,name,password) values('$username','$name','$password1')";
+                                $i=mysqli_query($con,$q);
+                                if(!$i)
+                                {
+                                    ?>
+                                    <td id="k7"> already taken </td>
+                                    <?php
+                                }
+                                if($i){
+                                    ?>
+                                    <script>
+                                    alert("account created");
+                                    window.location.href="./login.php";
+                                    </script>
+                                    <?php
+                                }
+                                mysqli_close($con);
+                            }
+                        }
+                        ?>
                 </tr>
                 <tr>
                     <td><input type="password" placeholder="password" name="password1"required /></td>
-                    
+                    <?php
+                        if (isset($_POST["submit"])) 
+                        {
+                            $name=$_POST['fullname'];
+                    $username=$_POST['username'];
+                    $password1=$_POST['password1'];
+                    $password2=$_POST['password2'];
+                    if( $password1 != $password2)
+                    {
+                        ?>
+                        
+                    <td  id="k8">wrong password</td>
+                        
+                        <?php
+                    }
+                        }
+                        ?>
                 </tr>
                 <tr>
                     <td><input type="password" placeholder=" Confirm password"  name="password2"required /></td>
-                    <td id="k8"></td>
+            
                 </tr>
                 <tr>
-                    <td><input id="s1" type="submit" value="Create An Account"/></td>
+                    <td><input id="s1" type="submit" name ="submit" value="Create An Account"/></td>
                 </tr>
         </table>
         </form>
@@ -46,7 +92,7 @@
     <div id="d4">
         <img src="./image/3.jpg">
     </div>
+    </div>
     
-</div>
 </body>
 </html>
