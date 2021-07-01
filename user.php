@@ -46,7 +46,7 @@ session_start();
                          $num=mysqli_num_rows($result);
                          if($num==1)
                          {
-                             $_session['username2']=$username;
+                             $_SESSION['username2']=$username;
                              header('location:http://localhost/BRM2/home1.php');
                          }else{
                             ?>

@@ -21,3 +21,8 @@ function f6()
 {
     window.location.href="./home1.php";
 }
+function f10()
+{
+    window.location.href="./logout.php";
+}
+
