@@ -46,7 +46,7 @@ input{
 
 }
 th,td{
-    width:50px;
+    width:70px;
     font-size:20px;
 }
 
@@ -71,7 +71,7 @@ th,td{
     top:0px;
     left:230px;
     height:30px;
-    width:800px;
+    width:900px;
 }
 #d13
 {
@@ -102,8 +102,8 @@ th,td{
 }
 #p1
 {
-    background-color:blue;
-    width:50%;
+    
+    width:60%;
     position:relative;
     top:45px;
     text-align:center;
@@ -132,7 +132,23 @@ th,td{
 }
 #d6
 {
-   
+    
+    width:40%;
+    height:70px;
+    font-size:20px;
+    float:right;
+}
+#d16
+{
+    
+    width:50%;
+    height:70px;
+    font-size:20px;
+    float:left;
+}
+#d17
+{
+
     width:50%;
     height:70px;
     font-size:20px;
@@ -228,5 +244,9 @@ a:link
 #b5
 {
     position:relative;
-    right:120px;
+    left:100px;
+    width:90px;
+    height:30px;
+    position:relative;
+    top:17px;
 }

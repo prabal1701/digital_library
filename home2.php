@@ -18,20 +18,28 @@ header('location:http://localhost/BRM2/admin.php');
        Digital Library
 </div>
     <div id="d6">
+    <div id="d16">
 <br/>
 <br/>
        <span id="b2">Hello    <span id="p11"> <?php echo $_SESSION['username1'];?> <span> </span>
+    </div>
+    <div id="d17">
+    <br/>
+    
+    <button id="b5" onclick="f10()">Log Out</button>
+    </div>
     </div>
    
 </div >
 
 <div id="d11">
    <div id="d12">
-       <table cellspacing="10px"> 
+       <table cellspacing="1px"> 
            <tr style="position:relative;top:-10px;">
                <td style="width:300px;font-size:20px;"><a href="./insertForm.php">INSERT NEW BOOK</a></td>
                <td  style="width:300px;"><a href="./updateForm.php">UPDATE RECORDS</a></td>
                <td  style="width:300px;"><a href="./deleteForm.php">DELETE RECORDS</a></td>
+               <td  style="width:200px;"><a href="./request.php">Request List</a></td>
             </tr>
         </table>
     </div>
