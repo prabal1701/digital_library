@@ -25,4 +25,14 @@ function f10()
 {
     window.location.href="./logout.php";
 }
+function f11()
+{
+    alert("record inserted");
+    window.location.href="./home2.php";
+}
+function f11()
+{
+    alert(" This book is available ");
+    window.location.href="./home2.php";
+}
 

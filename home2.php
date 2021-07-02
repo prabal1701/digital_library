@@ -36,15 +36,15 @@ header('location:http://localhost/BRM2/admin.php');
    <div id="d12">
        <table cellspacing="1px"> 
            <tr style="position:relative;top:-10px;">
-               <td style="width:300px;font-size:20px;"><a href="./insertForm.php">INSERT NEW BOOK</a></td>
-               <td  style="width:300px;"><a href="./updateForm.php">UPDATE RECORDS</a></td>
-               <td  style="width:300px;"><a href="./deleteForm.php">DELETE RECORDS</a></td>
+               <td style="width:300px;font-size:20px;"><a href="./insertForm.php">Insert New Book</a></td>
+               <td  style="width:300px;"><a href="./updateForm.php">Update Records</a></td>
+               <td  style="width:300px;"><a href="./deleteForm.php">Delete Records</a></td>
                <td  style="width:200px;"><a href="./request.php">Request List</a></td>
             </tr>
         </table>
     </div>
     <div id="d13">
-        <?php
+    <?php
         $con=mysqli_connect('localhost','root');
         mysqli_select_db($con,'brm');
         $q="select * from book";
