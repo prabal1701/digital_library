@@ -76,7 +76,7 @@ header('location:http://localhost/BRM2/user.php');
     <br/>
     <b>for addition of new book in the list 
         give suggestion to admin here </b><br/>
-        <a style="color:blue;" href="./request.php" > Click here</a> 
+        <a style="color:blue;" href="./suggestionform.php" > Click here</a> 
  </div>
     
 </body>
