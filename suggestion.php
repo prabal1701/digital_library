@@ -1,5 +1,7 @@
 <?php
-            
+            session_start();
+            if(!isset($_SESSION['username2']))
+            header('location:http://localhost/BRM2/user.php');
                 $author=$_POST['author'];
                 $book=$_POST['book'];
                 $isbn=$_POST['isbn'];

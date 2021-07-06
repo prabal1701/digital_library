@@ -6,9 +6,9 @@ header('location:http://localhost/BRM2/admin.php');
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Admin home page</title>
+        <title>Delete Book Records</title>
 
-        <link rel ="stylesheet" href="./frontend/home3.css"/>
+        <link rel ="stylesheet" href="./frontend/delete.css"/>
         <script src="./js/login.js"></script>
 </head>
 
@@ -38,8 +38,8 @@ header('location:http://localhost/BRM2/admin.php');
            <tr style="position:relative;top:-10px;">
                <td style="width:300px;font-size:20px;"><a href="./insertForm.php">Insert New Book</a></td>
                <td  style="width:300px;"><a href="./updateForm.php">Update Records</a></td>
-               <td  style="width:300px;"><a href="./deleteForm.php">Delete Records</a></td>
-               <td  style="width:200px;"><a href="./requestform.php">Request List</a></td>
+               <td  style="width:300px;"><a href="./home2.php">view book</a></td>
+               <td  style="width:200px;"><a href="./request.php">Request List</a></td>
             </tr>
         </table>
     </div>
@@ -51,6 +51,7 @@ header('location:http://localhost/BRM2/admin.php');
         $result=mysqli_query($con,$q);
         $num=mysqli_num_rows($result);
         ?>
+        <form action="delete.php" method="POST">
         <table id="t10">
             <tr id="row1">
                 <th style="width:333px;">Book id</th>
@@ -58,6 +59,7 @@ header('location:http://localhost/BRM2/admin.php');
                 <th style="width:333px;">Book NAME</th>
                 <th style="width:333px;">Author</th>
                 <th style="width:333px;">Price</th>
+                <th style="width:333px;">Select to Delete</th>
             </tr>
             <?php
             for($i=1;$i<=$num;$i++)
@@ -65,20 +67,27 @@ header('location:http://localhost/BRM2/admin.php');
                 $row=mysqli_fetch_array($result);
                 ?>
                 <tr class="row2">
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['b_id'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['ISBN'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['name'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['author'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['price'] ?></td>
+                <td style="width:222px;height:50px;text-align:center;"><?php echo $row['b_id'] ?></td>
+                <td style="width:222px;height:50px;text-align:center;"><?php echo $row['ISBN'] ?></td>
+                <td style="width:222px;height:50px;text-align:center;"><?php echo $row['name'] ?></td>
+                <td style="width:222px;height:50px;text-align:center;"><?php echo $row['author'] ?></td>
+                <td style="width:222px;height:50px;text-align:center;"><?php echo $row['price'] ?></td>
+                <td style="width:222px;height:50px;text-align:center;"><input id="check" type="checkbox" value="<?php echo $row['b_id'] ?>" name="b<?php echo $i?>"/></td>
             </tr>
                 <?php
             }
             ?>
+            <tr class="row2">
+            <td colspan="6"> <input id="delete" type="submit" value="Delete"/></td>
+            </tr>
         </table>
+       </form>
+        
         <?php
         mysqli_close($con);
         ?>
     </div>
+    
  </div>
     
 </body>
