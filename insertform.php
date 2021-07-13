@@ -4,10 +4,13 @@ if(!isset($_SESSION['username1']))
 header('location:http://localhost/BRM2/admin.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>Admin home page</title>
-
+        <meta name="description" 
+        content="This is a open library.">    
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./frontend/insert.css"/>
         <script src="./js/login.js"></script>
 </head>
@@ -48,15 +51,15 @@ header('location:http://localhost/BRM2/admin.php');
         <form action="insert.php" method="post">
                 <table id="t6">
                 <tr >
-                <td class="c1"><b>  BOOK name</b> <input name="book" class="inp" type="text" required/> </td>
-                 <td class="c1"><b> ISBN NO.</b><input class="inp" name="isbn"  type="text" required/> </td>
+                <td class="c1"><label>  BOOK name<input name="book" class="inp" type="text" required/></label>  </td>
+                 <td class="c1"><label> ISBN NO.<input class="inp" name="isbn"  type="text" required/></label> </td>
                 </tr>
                 <tr >
-                <td class="c1"><b> Author</b> <input class="inp" name="author"  type="text" required/> </td>
-                <td class="c1"> <b> Price(in RS)</b> <input class="inp" name="price" type="number" step="any" required/> </td>
+                <td class="c1"><label> Author <input class="inp" name="author"  type="text" required/></label> </td>
+                <td class="c1"> <label> Price(in RS)</b> <input class="inp" name="price" type="number" step="any" required/></label> </td>
                 </tr>
                 <tr >
-                    <td class="c1"><b> Link to read</b> <input class="inp" name="link"  type="text" required/> </td>
+                    <td class="c1"><label> Link to read <input class="inp" name="link"  type="text" required/></label> </td>
                     <td > <input id="sp"  type="submit" value="INSERT"/></td>
                 </tr>
                 </table>

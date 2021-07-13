@@ -1,16 +1,19 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>sign up</title>
-
+        <meta name="description" 
+        content="This is a Digital library signup page.">    
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./frontend/signup.css"/>
         <script src="./js/login.js"></script>
 </head>
 
 <body id="bo1">
 <div id="d1">
-    <p id="p1">Digital Library</p>
+    <h1 id="p1">Digital Library</h1>
     <div id="d6">
 <br/>
 <br/>
@@ -90,7 +93,7 @@
        <p id="p10"> already have account? <button id="b9" onclick="f2()">Login</button></p>
     </div>
     <div id="d4">
-        <img src="./image/3.jpg">
+        <img alt="book" src="./image/3.jpg">
     </div>
     </div>
     

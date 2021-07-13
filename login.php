@@ -1,9 +1,12 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>BOOK RECORD MANAGEMENT SYSTEM</title>
-
+        <meta name="description" 
+        content="This is a open library.">    
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./frontend/login.css"/>
         <script src="./js/login.js"></script>
 </head>
@@ -13,7 +16,7 @@
     
     <div id="d2">
         <div id="child1-d2">
-            <strong id="p1">Digital Library</strong>
+            <h1 id="p1">Digital Library</h1>
         </div>
        <div id="child2-d2">
             <button id="b1" onclick="f1()">Sign Up</button>
@@ -43,7 +46,7 @@
             dont have account? <a id="anchor" href="./signupform.php">create account</a>
         </div>
         <div id="d4">
-            <img src="https://source.unsplash.com/1600x900/?library">
+            <img alt="library" src="https://source.unsplash.com/1600x900/?library">
         </div>
     </div>
     

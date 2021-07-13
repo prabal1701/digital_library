@@ -2,17 +2,20 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>sign up</title>
-
+        <meta name="description" 
+        content="This is a open library.">    
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./frontend/signup.css"/>
         <script src="./js/login.js"></script>
 </head>
 
 <body id="bo1">
 <div id="d1">
-    <p id="p1">Digital Library</p>
+    <h1 id="p1">Digital Library</h1>
     <div id="d6">
 <br/>
 <br/>
@@ -65,7 +68,7 @@ session_start();
        <p id="p10"> dont have account? <button id="b9" onclick="f1()">signup</button></p>
     </div>
     <div id="d4">
-        <img src="./image/3.jpg">
+        <img alt="book" src="./image/3.jpg">
     </div>
     </div>
     

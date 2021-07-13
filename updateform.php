@@ -4,10 +4,13 @@ if(!isset($_SESSION['username1']))
 header('location:http://localhost/BRM2/admin.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>update book records</title>
-
+        <meta name="description" 
+        content="This is a open library.">    
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./frontend/home3.css"/>
         <script src="./js/login.js"></script>
 </head>

@@ -4,10 +4,13 @@ if(!isset($_SESSION['username2']))
 header('location:http://localhost/BRM2/user.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>User home page</title>
-
+        <meta name="description" 
+        content="This is a open library.">    
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./frontend/home1.css"/>
         <script src="./js/login.js"></script>
 </head>
@@ -49,6 +52,7 @@ header('location:http://localhost/BRM2/user.php');
                 <th style="width:333px;">Book NAME</th>
                 <th style="width:333px;">Author</th>
                 <th style="width:333px;">Price</th>
+                <th style="width:333px;"> Read here</th>
             </tr>
             <?php
             for($i=1;$i<=$num;$i++)
@@ -61,6 +65,7 @@ header('location:http://localhost/BRM2/user.php');
                 <td style="width:333px;height:50px;text-align:center;"><?php echo $row['name'] ?></td>
                 <td style="width:333px;height:50px;text-align:center;"><?php echo $row['author'] ?></td>
                 <td style="width:333px;height:50px;text-align:center;"><?php echo $row['price'] ?></td>
+                <td style="width:333px;height:50px;text-align:center;"><a href="<?php echo $row['link'] ?>">READ</a></td>
             </tr>
                 <?php
             }
@@ -76,7 +81,7 @@ header('location:http://localhost/BRM2/user.php');
     <br/>
     <b>for addition of new book in the list 
         give suggestion to admin here </b><br/>
-        <a style="color:blue;" href="./suggestionform.php" > Click here</a> 
+        <a style="color:blue;" href="./suggestionform.php" >give suggestion </a> 
  </div>
     
 </body>

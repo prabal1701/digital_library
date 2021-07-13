@@ -94,17 +94,17 @@ th,td{
 }
 #b9
 {
-    background-color:green;
-    color:blue;
+    background-color:white;
+    color:black;
 }
 #b2
 {
-    background-color:green;
+    background-color:white;
     border-width: 1px;
     width:180px;
     height:40px;
     font-size:larger;
-    color:white;
+    color:black;
 }
 #d3
 {
