@@ -56,6 +56,7 @@ header('location:http://localhost/BRM2/admin.php');
                 <td class="c1"> <b> Price(in RS)</b> <input class="inp" name="price" type="number" step="any" required/> </td>
                 </tr>
                 <tr >
+                    <td class="c1"><b> Link to read</b> <input class="inp" name="link"  type="text" required/> </td>
                     <td > <input id="sp"  type="submit" value="INSERT"/></td>
                 </tr>
                 </table>

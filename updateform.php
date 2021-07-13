@@ -6,7 +6,7 @@ header('location:http://localhost/BRM2/admin.php');
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Admin home page</title>
+        <title>update book records</title>
 
         <link rel ="stylesheet" href="./frontend/home3.css"/>
         <script src="./js/login.js"></script>
@@ -37,7 +37,7 @@ header('location:http://localhost/BRM2/admin.php');
        <table cellspacing="1px"> 
            <tr style="position:relative;top:-10px;">
                <td style="width:300px;font-size:20px;"><a href="./insertForm.php">Insert New Book</a></td>
-               <td  style="width:300px;"><a href="./updateForm.php">Update Records</a></td>
+               <td  style="width:300px;"><a href="./home2.php">view Records</a></td>
                <td  style="width:300px;"><a href="./deleteForm.php">Delete Records</a></td>
                <td  style="width:200px;"><a href="./requestform.php">Request List</a></td>
             </tr>
@@ -51,6 +51,7 @@ header('location:http://localhost/BRM2/admin.php');
         $result=mysqli_query($con,$q);
         $num=mysqli_num_rows($result);
         ?>
+        <form action="update.php" method="POST">
         <table id="t10">
             <tr id="row1">
                 <th style="width:333px;">Book id</th>
@@ -58,7 +59,7 @@ header('location:http://localhost/BRM2/admin.php');
                 <th style="width:333px;">Book NAME</th>
                 <th style="width:333px;">Author</th>
                 <th style="width:333px;">Price</th>
-                <th style="width:333px;"> Read here</th>
+                <th style="width:333px;">link</th>
             </tr>
             <?php
             for($i=1;$i<=$num;$i++)
@@ -66,17 +67,27 @@ header('location:http://localhost/BRM2/admin.php');
                 $row=mysqli_fetch_array($result);
                 ?>
                 <tr class="row2">
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['b_id'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['ISBN'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['name'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['author'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['price'] ?></td>
-                <td style="width:333px;height:50px;text-align:center;"><a href="<?php echo $row['link'] ?>">READ</a></td>
+                <td style="width:333px;height:50px;text-align:center;"><?php echo $row['b_id'] ?> <input class="in"
+                 name="b_id<?php echo $i;?>" type="hidden" value="<?php echo $row['b_id'] ?>"/></td>
+                <td style="width:333px;height:50px;text-align:center;"><input class="in"
+                 name="isbn<?php echo $i;?>" type="text" value="<?php echo $row['ISBN'] ?>"/></td>
+                <td style="width:333px;height:50px;text-align:center;"><input class="in"
+                 name="name<?php echo $i;?>" type="text" value="<?php echo $row['name'] ?>"/></td>
+                <td style="width:333px;height:50px;text-align:center;"><input class="in"
+                 name="author<?php echo $i;?>" type="text" value="<?php echo $row['author'] ?>"/></td>
+                <td style="width:333px;height:50px;text-align:center;"><input class="in"
+                 name="price<?php echo $i;?>" type="number" value="<?php echo $row['price'] ?>"/></td>
+                <td style="width:333px;height:50px;text-align:center;"><input class="in"
+                 name="link<?php echo $i;?>" type="text" value="<?php echo $row['link'] ?>"/></td>
             </tr>
                 <?php
             }
             ?>
+             <tr class="row2">
+            <td colspan="6"> <input id="update" type="submit" value="Update"/></td>
+            </tr>
         </table>
+        </form>
         <?php
         mysqli_close($con);
         ?>

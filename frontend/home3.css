@@ -32,6 +32,19 @@ input{
     font-size:20px;
     border-radius: 10px;
 }
+.in
+{
+    width:170px;
+    height:30px;
+    font-size:15px;
+    border-radius: 10px;
+}
+#update
+{
+    position:relative;
+    left:440px;
+    width:150px;
+}
 #n1
 {
     display:block;

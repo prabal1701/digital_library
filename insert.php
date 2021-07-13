@@ -7,10 +7,11 @@ header('location:http://localhost/BRM2/admin.php');
                 $book=$_POST['book'];
                 $isbn=$_POST['isbn'];
                 $price=$_POST['price'];
+                $link=$_POST['link'];
                 $con=mysqli_connect('localhost','root');
                 mysqli_select_db($con,'brm');
-                    $q="insert into book(ISBN,name,author,price) 
-                    values ('$isbn','$book','$author',$price)";
+                    $q="insert into book(ISBN,name,author,price,link) 
+                    values ('$isbn','$book','$author',$price,'$link')";
                     $info=mysqli_query($con,$q);
                     if($info==1)
                     {
